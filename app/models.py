@@ -15,7 +15,7 @@ class User(db.Model):
         return '<User {}>'.format(self.username)
 
 
-class Posts(db.Model):
+class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.String(160))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
