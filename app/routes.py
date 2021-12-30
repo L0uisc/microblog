@@ -15,7 +15,6 @@ from datetime import datetime
 @app.route('/index')
 @login_required
 def index():
-    user = {'username': 'Louis'}
     posts = [ 
         {
             'author': {'username': 'John'},
@@ -24,13 +23,9 @@ def index():
         {
             'author': {'username': 'Susan'},
             'body': 'The Avengers movie was so cool!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': "Can't wait for summer!"
         }
     ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
+    return render_template('index.html', title='Home', posts=posts)
 
 
 @app.route('/login', methods=['GET', 'POST'])
