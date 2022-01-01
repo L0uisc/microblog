@@ -16,7 +16,7 @@ from datetime import datetime
 @login_required
 def index():
     user = {'username': 'Louis'}
-    posts = [ 
+    posts = [
         {
             'author': {'username': 'John'},
             'body': 'Beautiful day in Portland!'
